@@ -1,0 +1,62 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+model User {
+  id           Int        @id @default(autoincrement())
+  email        String     @unique
+  passwordHash String     @map("password_hash")
+  role         Role       @default(USER)
+  createdAt    DateTime   @default(now()) @map("created_at")
+  updatedAt    DateTime   @updatedAt @map("updated_at")
+  reports      WaitTime[]
+
+  @@map("users")
+}
+
+model Company {
+  id          Int        @id @default(autoincrement())
+  companyName String     @map("company_name")
+  industry    String
+  phone       String     @unique
+  createdAt   DateTime   @default(now()) @map("created_at")
+  updatedAt   DateTime   @updatedAt @map("updated_at")
+  waitTimes   WaitTime[]
+
+  @@index([companyName])
+  @@index([industry])
+  @@map("companies")
+}
+
+model WaitTime {
+  id              Int      @id @default(autoincrement())
+  companyId       Int      @map("company_id")
+  userId          Int?     @map("user_id")
+  waitTimeMinutes Int      @map("wait_time_minutes")
+  notes           String?
+  createdAt       DateTime @default(now()) @map("created_at")
+  company         Company  @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  user            User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([companyId, createdAt])
+  @@index([createdAt])
+  @@map("wait_times")
+}
+
+model BetaUser {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("beta_users")
+}

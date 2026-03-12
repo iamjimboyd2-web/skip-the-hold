@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skip the Hold</title>
+    <meta
+      name="description"
+      content="Check customer service hold times before you call and help others by reporting your wait times."
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-shell">
+        <a class="brand" href="/">
+          <span class="brand-mark">S</span>
+          <span>Skip the Hold</span>
+        </a>
+        <nav class="site-nav">
+          <a href="#search">Search</a>
+          <a href="#trending">Trending</a>
+          <a href="#beta">Beta</a>
+          <a href="/login.html" id="login-link">Login</a>
+          <a href="/admin.html" id="admin-link" class="hidden">Admin</a>
+          <button id="logout-button" class="ghost-button hidden" type="button">Logout</button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-section">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Hold-time intelligence for everyday callers</p>
+            <h1>Know the wait before you dial customer service.</h1>
+            <p class="hero-text">
+              Search real company hold times, spot the worst queues today, and find the fastest
+              time window to call.
+            </p>
+            <div class="hero-actions">
+              <a class="primary-button" href="#search">Search Companies</a>
+              <a class="secondary-button" href="#beta">Join the Beta</a>
+            </div>
+            <div class="hero-stats" id="hero-stats">
+              <article class="stat-card">
+                <span class="stat-label">Trending today</span>
+                <strong id="stat-trending-count">--</strong>
+              </article>
+              <article class="stat-card">
+                <span class="stat-label">Longest average</span>
+                <strong id="stat-longest-wait">--</strong>
+              </article>
+              <article class="stat-card">
+                <span class="stat-label">Best use</span>
+                <strong>Call smarter</strong>
+              </article>
+            </div>
+          </div>
+
+          <aside class="hero-panel">
+            <div class="panel-glow"></div>
+            <h2>Today's hot zones</h2>
+            <p>These companies are seeing the highest reported hold times today.</p>
+            <div id="hero-trending" class="mini-list"></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="search">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Company search</p>
+            <h2>Search by company or industry</h2>
+          </div>
+
+          <form id="search-form" class="search-shell">
+            <label class="field">
+              <span>Company name or keyword</span>
+              <input type="search" id="search-query" placeholder="Try Verizon, banking, or airline" />
+            </label>
+            <label class="field">
+              <span>Industry</span>
+              <select id="search-industry">
+                <option value="All">All industries</option>
+                <option>Telecom</option>
+                <option>Airlines</option>
+                <option>Banking</option>
+                <option>Insurance</option>
+                <option>Healthcare</option>
+                <option>Retail</option>
+                <option>Tech</option>
+                <option>Utilities</option>
+                <option>Government</option>
+                <option>Auto</option>
+                <option>Streaming</option>
+                <option>Travel</option>
+              </select>
+            </label>
+            <button class="primary-button" type="submit">Find companies</button>
+          </form>
+
+          <div id="search-feedback" class="feedback"></div>
+          <div id="search-results" class="company-grid"></div>
+        </div>
+      </section>
+
+      <section class="section accent-section" id="trending">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Trending hold times</p>
+            <h2>Longest reported waits today</h2>
+          </div>
+          <div id="trending-list" class="company-grid"></div>
+        </div>
+      </section>
+
+      <section class="section" id="beta">
+        <div class="container beta-shell">
+          <div>
+            <p class="eyebrow">Beta signup</p>
+            <h2>Get early access to smarter hold-time alerts.</h2>
+            <p class="hero-text">
+              Join the beta list to hear about launch updates, analytics upgrades, and call-time
+              prediction improvements.
+            </p>
+          </div>
+          <form id="beta-form" class="beta-form">
+            <label class="field">
+              <span>Email address</span>
+              <input type="email" id="beta-email" placeholder="you@example.com" required />
+            </label>
+            <button class="primary-button" type="submit">Join beta</button>
+            <p id="beta-feedback" class="feedback"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand footer-brand" href="/">
+            <span class="brand-mark">S</span>
+            <span>Skip the Hold</span>
+          </a>
+          <p>Real reports, faster calls, and fewer afternoons lost to hold music.</p>
+        </div>
+        <div class="footer-links">
+          <a href="/company.html?id=1">Company pages</a>
+          <a href="/login.html">User login</a>
+          <a href="/admin.html">Admin dashboard</a>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>

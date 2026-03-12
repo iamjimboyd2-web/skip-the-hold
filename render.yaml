@@ -1,0 +1,35 @@
+services:
+  - type: web
+    name: skip-the-hold
+    runtime: docker
+    plan: starter
+    dockerfilePath: ./docker/Dockerfile
+    rootDir: .
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 8080
+      - key: DATABASE_URL
+        fromDatabase:
+          name: skip-the-hold-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRES_IN
+        value: 7d
+      - key: FRONTEND_ORIGIN
+        value: https://skiptheholdapp.com
+      - key: ANALYTICS_TIMEZONE
+        value: America/Los_Angeles
+      - key: ADMIN_EMAIL
+        value: admin@skiptheholdapp.com
+      - key: ADMIN_PASSWORD
+        generateValue: true
+
+databases:
+  - name: skip-the-hold-db
+    plan: starter
+    databaseName: skipthehold
+    user: skipthehold

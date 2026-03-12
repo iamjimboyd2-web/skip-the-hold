@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.local
+.DS_Store
+Thumbs.db
+coverage/
+dist/
+build/
+backend/node_modules/
+backend/.env
+backend/prisma/dev.db
+backend/prisma/dev.db-journal

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Skip the Hold</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body class="auth-body">
+    <main class="auth-layout">
+      <section class="auth-panel">
+        <a class="brand" href="/">
+          <span class="brand-mark">S</span>
+          <span>Skip the Hold</span>
+        </a>
+        <p class="eyebrow">JWT-powered access</p>
+        <h1>Sign in or create an account.</h1>
+        <p class="hero-text">
+          Users can save their sessions and admins can manage companies, reports, and analytics.
+        </p>
+      </section>
+
+      <section class="auth-card">
+        <div class="auth-toggle">
+          <button type="button" id="show-login" class="toggle-button active">Login</button>
+          <button type="button" id="show-register" class="toggle-button">Register</button>
+        </div>
+
+        <form id="auth-form" class="stack-form">
+          <label class="field">
+            <span>Email</span>
+            <input type="email" id="auth-email" required />
+          </label>
+          <label class="field">
+            <span>Password</span>
+            <input type="password" id="auth-password" minlength="8" required />
+          </label>
+          <button class="primary-button" id="auth-submit" type="submit">Login</button>
+          <p id="auth-feedback" class="feedback"></p>
+        </form>
+
+        <p class="tiny-copy">
+          Seeded admin credentials come from the environment variables in
+          <code>backend/.env.example</code>.
+        </p>
+      </section>
+    </main>
+
+    <script type="module" src="/js/login.js"></script>
+  </body>
+</html>
+

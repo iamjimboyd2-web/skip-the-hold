@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | Skip the Hold</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-shell">
+        <a class="brand" href="/">
+          <span class="brand-mark">S</span>
+          <span>Skip the Hold</span>
+        </a>
+        <nav class="site-nav">
+          <a href="/">Homepage</a>
+          <button id="admin-logout" class="ghost-button" type="button">Logout</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Admin dashboard</p>
+          <h1>Moderate reports and manage the company catalog.</h1>
+        </div>
+
+        <div id="admin-feedback" class="feedback"></div>
+
+        <section class="stats-grid" id="analytics-grid"></section>
+
+        <section class="detail-grid top-gap">
+          <article class="surface-card">
+            <div class="section-heading compact">
+              <p class="eyebrow">Company management</p>
+              <h2>Add or edit companies</h2>
+            </div>
+            <form id="company-form" class="stack-form">
+              <input type="hidden" id="company-id" />
+              <label class="field">
+                <span>Company name</span>
+                <input type="text" id="company-name" required />
+              </label>
+              <label class="field">
+                <span>Industry</span>
+                <input type="text" id="company-industry" required />
+              </label>
+              <label class="field">
+                <span>Phone</span>
+                <input type="text" id="company-phone" required />
+              </label>
+              <div class="action-row">
+                <button class="primary-button" type="submit" id="company-submit">Save company</button>
+                <button class="secondary-button" type="button" id="company-reset">Clear</button>
+              </div>
+            </form>
+          </article>
+
+          <article class="surface-card">
+            <div class="section-heading compact">
+              <p class="eyebrow">Search companies</p>
+              <h2>Quick edit list</h2>
+            </div>
+            <form id="admin-search-form" class="search-shell condensed">
+              <label class="field">
+                <span>Search</span>
+                <input type="search" id="admin-search-query" placeholder="Company or industry" />
+              </label>
+              <button class="primary-button" type="submit">Search</button>
+            </form>
+            <div id="admin-company-results" class="admin-list"></div>
+          </article>
+        </section>
+
+        <section class="top-gap">
+          <div class="section-heading compact">
+            <p class="eyebrow">Recent reports</p>
+            <h2>Delete spam or low-quality submissions</h2>
+          </div>
+          <div id="admin-report-results" class="admin-list"></div>
+        </section>
+      </div>
+    </main>
+
+    <script type="module" src="/js/admin.js"></script>
+  </body>
+</html>

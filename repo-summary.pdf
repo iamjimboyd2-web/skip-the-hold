@@ -1,0 +1,112 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 1 /Kids [3 0 R] >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Length 1927 >>
+stream
+0.85 G
+1 w
+54 706 m 558 706 l S
+54 610 m 558 610 l S
+54 560 m 558 560 l S
+54 430 m 558 430 l S
+54 364 m 558 364 l S
+0 g
+BT
+/F2 22 Tf
+1 0 0 1 54 746 Tm
+(App Summary) Tj
+/F1 9 Tf
+1 0 0 1 54 720 Tm
+(Repo evidence only. Repository root inspected at C:\\\\Users\\\\boydj\\\\OneDrive\\\\Desktop\\\\codex and found empty.) Tj
+/F2 13 Tf
+1 0 0 1 54 686 Tm
+(What it is) Tj
+/F1 11 Tf
+1 0 0 1 70 668 Tm
+(A concrete application implementation was not found in repo.) Tj
+/F1 11 Tf
+1 0 0 1 70 652 Tm
+(The repository contains no source files, docs, or manifests to identify the app's purpose.) Tj
+/F2 13 Tf
+1 0 0 1 54 620 Tm
+(Who it's for) Tj
+/F1 11 Tf
+1 0 0 1 70 602 Tm
+(Primary user/persona: Not found in repo.) Tj
+/F2 13 Tf
+1 0 0 1 54 570 Tm
+(What it does) Tj
+/F1 11 Tf
+1 0 0 1 70 552 Tm
+(- Core user features: Not found in repo.) Tj
+/F1 11 Tf
+1 0 0 1 70 536 Tm
+(- UI screens or workflows: Not found in repo.) Tj
+/F1 11 Tf
+1 0 0 1 70 520 Tm
+(- API endpoints or background jobs: Not found in repo.) Tj
+/F1 11 Tf
+1 0 0 1 70 504 Tm
+(- Integrations or external services: Not found in repo.) Tj
+/F1 11 Tf
+1 0 0 1 70 488 Tm
+(- Authentication or authorization: Not found in repo.) Tj
+/F1 11 Tf
+1 0 0 1 70 472 Tm
+(- Persistence or data model: Not found in repo.) Tj
+/F2 13 Tf
+1 0 0 1 54 440 Tm
+(How it works) Tj
+/F1 11 Tf
+1 0 0 1 70 422 Tm
+(Architecture overview: Not found in repo.) Tj
+/F1 11 Tf
+1 0 0 1 70 406 Tm
+(No components, services, data stores, or documented data flow were present to infer architecture.) Tj
+/F2 13 Tf
+1 0 0 1 54 374 Tm
+(How to run) Tj
+/F1 11 Tf
+1 0 0 1 70 356 Tm
+(- Install/build requirements: Not found in repo.) Tj
+/F1 11 Tf
+1 0 0 1 70 340 Tm
+(- Start command or scripts: Not found in repo.) Tj
+/F1 11 Tf
+1 0 0 1 70 324 Tm
+(- Environment variables/configuration: Not found in repo.) Tj
+/F1 9 Tf
+1 0 0 1 54 286 Tm
+(Conclusion: the repository does not currently contain enough evidence to describe a runnable app.) Tj
+ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000000321 00000 n 
+0000000396 00000 n 
+0000002357 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+2374
+%%EOF
